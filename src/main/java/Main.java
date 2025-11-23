@@ -10,12 +10,13 @@ public class Main {
 
             File file = new File(path);
             boolean fileExists = file.exists(); // проверка существует ли файл
-            boolean isDirectory = file.isDirectory(); // проверка, что путь именно к файлу
+            boolean isDirectory = file.isDirectory(); // проверка, что путь к папке
 
-            if(fileExists == false || isDirectory == false){
+            if(fileExists == false || isDirectory == true){
                 System.out.println("Указанный файл не существует или указанный путь является путём к папке, а не к файлу" + "\n");
                 continue;
             }
+
             System.out.println("Путь указан верно");
             System.out.println("Это файл номер " + cout++ + "\n");
         }
